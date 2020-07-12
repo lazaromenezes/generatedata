@@ -15,9 +15,9 @@ class Emails {
 		$mail->Host = 'smtp.sendgrid.net';
 		$mail->Port = 25;
 		$mail->SMTPAuth = true;
-		$mail->Username = 'apikey'
-		$mail->Password = $sgApiKey
-		$mail->setFrom('lazarodm@gmail.com', 'Lalão');
+		$mail->Username = 'apikey';
+		$mail->Password = $sgApiKey;
+		$mail->setFrom('lazarodm@gmail.com', 'Lalao');
 		$mail->addAddress($info["recipient"]);
 		$mail->Subject = $info["subject"];
 		$mail->AltBody = $info["content"];
