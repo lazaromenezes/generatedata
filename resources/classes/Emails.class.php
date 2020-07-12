@@ -1,5 +1,7 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 /**
  * Nothing  much here yet - but it's here so we can expand on it cleanly later on.
@@ -16,7 +18,7 @@ class Emails {
 		$mail->Port = 25;
 		$mail->SMTPAuth = true;
 		$mail->Username = 'apikey';
-		$mail->Password = $sgApiKey;
+		$mail->Password = Core::getSgApiKey();
 		$mail->setFrom('lazarodm@gmail.com', 'Lalao');
 		$mail->addAddress($info["recipient"]);
 		$mail->Subject = $info["subject"];

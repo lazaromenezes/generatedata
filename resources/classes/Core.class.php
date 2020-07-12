@@ -18,12 +18,13 @@ class Core {
 	private static $dbUsername;
 	private static $dbPassword;
 	private static $dbTablePrefix = "gd_";
+  private static $sgApiKey;
 	private static $encryptionSalt;
 	private static $errorReporting = 1;
 	private static $maxGeneratedRows = 100000;
 	private static $defaultNumRows = 100;
 	private static $maxDemoModeRows = 100;
-    private static $maxDataSetHistorySize = 200;
+  private static $maxDataSetHistorySize = 200;
 	private static $defaultLanguageFile = "en";
 	private static $defaultExportType = "HTML";
 	private static $defaultCountryPlugins = array();
@@ -175,6 +176,7 @@ class Core {
 			self::$dbName     = (isset($dbName)) ? $dbName : null;
 			self::$dbUsername = (isset($dbUsername)) ? $dbUsername : null;
 			self::$dbPassword = (isset($dbPassword)) ? $dbPassword : null;
+			self::$sgApiKey = (isset($sgApiKey)) ? $sgApiKey : null;
 			self::$dbTablePrefix = (isset($dbTablePrefix)) ? $dbTablePrefix : null;
 			self::$encryptionSalt = (isset($encryptionSalt)) ? $encryptionSalt : null;
 			self::$pluginSettings = (isset($pluginSettings)) ? $pluginSettings : array();
@@ -283,6 +285,10 @@ class Core {
 	 */
 	public static function getDbTablePrefix() {
 		return self::$dbTablePrefix;
+	}
+
+	public static function getSgApiKey() {
+		return self::$sgApiKey;
 	}
 
 	/**
