@@ -44,6 +44,9 @@ require_once(__DIR__ . "/resources/classes/ImportSql.class.php");
 require_once(__DIR__ . "/resources/libs/jsv4.php");
 require_once(__DIR__ . "/resources/libs/smarty/Smarty.class.php");
 require_once(__DIR__ . "/resources/classes/SecureSmarty.class.php");
+require_once(__DIR__ . "/resources/libs/phpmailer/PHPMailer.php");
+require_once(__DIR__ . "/resources/libs/phpmailer/SMTP.php");
+require_once(__DIR__ . "/resources/libs/phpmailer/Exception.php");
 
 
 // handle magic quotes
