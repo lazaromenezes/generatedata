@@ -22,7 +22,7 @@ class Emails {
 		$mail->setFrom('lazarodm@gmail.com', 'Lalao');
 		$mail->addAddress($info["recipient"]);
 		$mail->Subject = $info["subject"];
-		$mail->AltBody = $info["content"];
+		$mail->Body = $info["content"];
 
 		return $mail->send();
 	}
